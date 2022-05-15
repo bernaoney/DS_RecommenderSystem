@@ -12,10 +12,10 @@ new_user_input_df <- tibble(user_id = rep("user_9999", 6),
                                      "isbn_0439136350", "isbn_043935806X", 
                                      "isbn_0060938455"
                             ),
-                            book_rating = c(10,4,5,8,6,12))
+                            book_rating = c(10,4,5,8,6,2))
 
 # add new user input into the existing ratings
-updated_ratings_df <- bind_rows(ratings, new_user_df)
+updated_ratings_df <- bind_rows(ratings, new_user_input_df)
 
 # convert long to wide
 us_rat_mat <- updated_ratings_df %>% 

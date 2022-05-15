@@ -102,7 +102,7 @@ print(ibcf_eval)
 libmf <- train_books %>% Recommender(method = "LIBMF")
 libmf_eval <- libmf %>% predict(known_books, type = "ratings") %>%
   calcPredictionAccuracy(unknown_books)
-print(ibcf_eval)
+print(libmf_eval)
 
 rbind(random_eval, pop_eval,
       svd_eval, svdf_eval,

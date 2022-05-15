@@ -6,7 +6,7 @@ Recommender systems are everywhere.
 
 This project utilizes the Book-Crossing Dataset from [ Institut für Informatik, Universität Freiburg](http://www2.informatik.uni-freiburg.de/~cziegler/BX/) to recommend books.
 
-I tested the performance of the following recommenders:
+After reducing the size of huge matrix (from 44778 X 204678 to 2774 X 6340 for computational time efficiency), I tested the performance of the following recommenders:
 
 * Random
 * Popular
@@ -25,6 +25,7 @@ IBCF is the winner in this analysis, which can be used for recommendations to ne
 
 In follow up stages (in collaboration with [Murat Ardag](https://mmuratardag.github.io/)), the system
 
+1. Estimate the optimal K with text clustering.
 1. suggests/serves popular or random books to the user (to be implemented in the Shiny app)
 2.1. the user rates these recommendations (this step is already implemented
 2.2. this new input is fed into the system (this step is already implemented)
